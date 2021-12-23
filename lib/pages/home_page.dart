@@ -83,12 +83,12 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
+                const Text(
                   "Shoes",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
                 Row(
-                  children: <Widget>[
+                  children: const <Widget>[
                     Text(
                       "Sort by",
                       style:
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                       width: 8,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 5),
+                      padding: EdgeInsets.only(top: 5),
                       child: Icon(Icons.keyboard_arrow_down),
                     )
                   ],
@@ -126,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                                   sizes: products[index]['sizes'],
                                 )));
                   },
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                       child: Stack(
                     children: <Widget>[
@@ -152,23 +153,23 @@ class _HomePageState extends State<HomePage> {
                                         fit: BoxFit.cover)),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Text(
                               products[index]['name'],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 17, fontWeight: FontWeight.w600),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Text(
                               "\$ " + products[index]['price'],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.w500),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 25,
                             )
                           ],
